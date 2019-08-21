@@ -1,0 +1,95 @@
+<div class = "table-teachers">
+        <mat-form-field>
+            <input matInput (keyup)='applyFilter($event.target.value)' placeholder="Поиск" >
+        </mat-form-field>
+        <table  mat-table [dataSource]="teachers" style="width: 100%" class="mat-elevation-z8">
+            <ng-container matColumnDef="fullname">
+                <th class = "header" mat-header-cell *matHeaderCellDef> ФИО </th>
+                <td class = "element" mat-cell *matCellDef="let element">
+                   {{element.fullname}}  
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="date_submited">
+                    <th class = "header" mat-header-cell *matHeaderCellDef> Дата Занесения </th>
+                    <td class = "element" mat-cell *matCellDef="let element">
+                       {{element.date_submited}}  
+                    </td>
+            </ng-container>
+
+            <ng-container matColumnDef="position">
+                    <th class = "header" mat-header-cell *matHeaderCellDef> Должность </th>
+                    <td class = "element" mat-cell *matCellDef="let element">
+                       {{element.position}}  
+                    </td>
+            </ng-container>
+
+            <ng-container matColumnDef="organization">
+                    <th class = "header" mat-header-cell *matHeaderCellDef> Организация </th>
+                    <td class = "element" mat-cell *matCellDef="let element">
+                       {{element.organization}}  
+                    </td>
+            </ng-container>
+
+            <ng-container matColumnDef="org_type">
+                    <th class = "header" mat-header-cell *matHeaderCellDef> Тип Организации </th>
+                    <td class = "element" mat-cell *matCellDef="let element">
+                       {{element.org_type}}  
+                    </td>
+            </ng-container>
+
+            <ng-container matColumnDef="territory">
+                    <th class = "header" mat-header-cell *matHeaderCellDef> Область </th>
+                    <td class = "element" mat-cell *matCellDef="let element">
+                       {{element.territory}}  
+                    </td>
+            </ng-container>
+
+            <ng-container matColumnDef="location">
+                    <th class = "header" mat-header-cell *matHeaderCellDef> Местожительство </th>
+                    <td class = "element" mat-cell *matCellDef="let element">
+                       {{element.location}}  
+                    </td>
+            </ng-container>
+
+            <ng-container matColumnDef="vid">
+                    <th class = "header" mat-header-cell *matHeaderCellDef> Вид </th>
+                    <td class = "element" mat-cell *matCellDef="let element">
+                       {{element.vid}}  
+                    </td>
+            </ng-container>
+
+            <ng-container matColumnDef="birthdate">
+                    <th class = "header" mat-header-cell *matHeaderCellDef> Дата Рождения </th>
+                    <td class = "element" mat-cell *matCellDef="let element">
+                       {{element.birthdate}}  
+                    </td>
+            </ng-container>
+
+            <ng-container matColumnDef="qualification_category">
+                    <th class = "header" mat-header-cell *matHeaderCellDef> Категория Квалицфикации </th>
+                    <td class = "element" mat-cell *matCellDef="let element">
+                       {{element.qualification_category}}  
+                    </td>
+            </ng-container>
+
+            <ng-container matColumnDef="plan_attestation_year">
+                    <th class = "header" mat-header-cell *matHeaderCellDef> План Аттестации </th>
+                    <td class = "element" mat-cell *matCellDef="let element">
+                       {{element.plan_attestation_year}}  
+                    </td>
+            </ng-container>
+
+            <ng-container matColumnDef="workflow">
+                    <th class = "header" mat-header-cell *matHeaderCellDef> Рабочий процесс </th>
+                    <td class = "element" mat-cell *matCellDef="let element">
+                       {{element.workflow}}  
+                    </td>
+            </ng-container>
+        
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        
+</div>
