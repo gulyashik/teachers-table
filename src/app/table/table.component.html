@@ -46,7 +46,7 @@
             </ng-container>
 
             <ng-container matColumnDef="location">
-                    <th class = "header" mat-header-cell *matHeaderCellDef> Местожительство </th>
+                    <th class = "header" mat-header-cell *matHeaderCellDef> Место жительство </th>
                     <td class = "element" mat-cell *matCellDef="let element">
                        {{element.location}}  
                     </td>
@@ -67,14 +67,14 @@
             </ng-container>
 
             <ng-container matColumnDef="qualification_category">
-                    <th class = "header" mat-header-cell *matHeaderCellDef> Категория Квалицфикации </th>
+                    <th class = "header" mat-header-cell *matHeaderCellDef> Категория квалицфикации </th>
                     <td class = "element" mat-cell *matCellDef="let element">
                        {{element.qualification_category}}  
                     </td>
             </ng-container>
 
             <ng-container matColumnDef="plan_attestation_year">
-                    <th class = "header" mat-header-cell *matHeaderCellDef> План Аттестации </th>
+                    <th class = "header" mat-header-cell *matHeaderCellDef> План аттестации </th>
                     <td class = "element" mat-cell *matCellDef="let element">
                        {{element.plan_attestation_year}}  
                     </td>
@@ -91,5 +91,4 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
           </table>
-        
 </div>
